@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>🧪 Quiz: uso seguro del visor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body class="dark-theme">
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="btn-icon" onclick="location.href='index.html'">🏠</button>
+      <span class="brand"><strong>Quiz de seguridad</strong><br/><small>Oculus / Meta Quest</small></span>
+    </div>
+  </header>
+  <main id="main-content">
+    <section class="cards-grid">
+      <article class="card">
+        <h2>🧪 Quiz rápido</h2>
+        <p>Marca la respuesta que creas correcta. Puedes hacerlo en voz alta o con apoyo de un adulto.</p>
+        <form id="quiz-form">
+          <div class="question">
+            <p>1. ¿Qué es lo primero que hago antes de colocar el visor?</p>
+            <label><input type="radio" name="q1" value="a" /> Correr por la sala.</label><br/>
+            <label><input type="radio" name="q1" value="b" /> Revisar que el visor esté limpio y el espacio libre.</label>
+          </div>
+          <div class="question">
+            <p>2. Si me siento mareado o incómodo, debo...</p>
+            <label><input type="radio" name="q2" value="a" /> Seguir jugando en silencio.</label><br/>
+            <label><input type="radio" name="q2" value="b" /> Levantar la mano o decir la palabra de seguridad.</label>
+          </div>
+          <div class="question">
+            <p>3. ¿Quién me ayuda a colocar y quitar el visor?</p>
+            <label><input type="radio" name="q3" value="a" /> Cualquier compañero sin avisar al adulto.</label><br/>
+            <label><input type="radio" name="q3" value="b" /> Belén u otro adulto responsable.</label>
+          </div>
+          <button type="submit" class="btn-main" style="margin-top:0.6rem;">Revisar respuestas</button>
+        </form>
+        <p id="quiz-result" style="margin-top:0.6rem;font-size:0.85rem;"></p>
+      </article>
+    </section>
+  </main>
+  <script>
+    const form = document.getElementById('quiz-form');
+    const result = document.getElementById('quiz-result');
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        let score = 0;
+        if (form.q1.value === 'b') score++;
+        if (form.q2.value === 'b') score++;
+        if (form.q3.value === 'b') score++;
+        if (score === 3) {
+          result.textContent = '🌟 ¡Excelente! Usas el visor de forma muy segura.';
+        } else if (score === 2) {
+          result.textContent = '👍 Muy bien. Repasemos juntos el paso que faltó.';
+        } else {
+          result.textContent = '🙂 Vamos a revisar de nuevo la guía antes de usar el visor.';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

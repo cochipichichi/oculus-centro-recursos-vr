@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cómo colocar tu visor Oculus / Meta Quest</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Guía paso a paso, clara y visual, para que niñas y niños del Programa de Integración Escolar (PIE) aprendan a colocar de forma segura un visor Oculus / Meta Quest." />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body class="dark-theme">
+  <header class="topbar" aria-label="Barra de accesibilidad e inicio">
+    <div class="topbar-left">
+      <button class="btn-icon" id="btn-home" aria-label="Ir al inicio">🏠</button>
+      <span class="brand">
+        <strong data-i18n-key="title">Cómo colocar tu visor Oculus / Meta Quest</strong><br/>
+        <small data-i18n-key="subtitle">Guía sencilla para la Sala SEM · PIE</small>
+      </span>
+    </div>
+    <div class="topbar-right" aria-label="Controles inclusivos">
+      <button class="btn-icon" id="btn-voice" aria-label="Activar narrador" title="Narrador">🗣️</button>
+      <button class="btn-icon" id="btn-theme" aria-label="Cambiar tema claro/oscuro" title="Tema">🌓</button>
+      <button class="btn-icon" id="btn-font-inc" aria-label="Aumentar tamaño de letra" title="Aumentar letra">A+</button>
+      <button class="btn-icon" id="btn-font-dec" aria-label="Disminuir tamaño de letra" title="Disminuir letra">A−</button>
+      <div class="lang-switcher">
+        <button class="btn-icon" id="btn-lang" aria-haspopup="true" aria-expanded="false" title="Cambiar idioma">🌐</button>
+        <ul class="lang-menu" id="lang-menu" aria-label="Seleccionar idioma">
+          <li data-lang="es">🇨🇱 Español</li>
+          <li data-lang="en">🇬🇧 English</li>
+          <li data-lang="arn">🏳️ Mapudungun*</li>
+        </ul>
+      </div>
+      <button class="btn-icon" id="btn-guide" aria-label="Ver guía paso a paso" title="Guía paso a paso">🧠</button>
+      <button class="btn-icon" id="btn-search" aria-label="Buscar en la página" title="Buscar">🔍</button>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero">
+      <div class="hero-text">
+        <h1 data-i18n-key="hero_title">Colocación segura del visor</h1>
+        <p data-i18n-key="hero_intro">
+          Esta guía fue creada para la Sala SEM del Programa de Integración Escolar (PIE),
+          para que cada estudiante pueda usar el visor de realidad virtual con seguridad,
+          calma y mucha ayuda visual. 💜
+        </p>
+        <div class="hero-tags">
+          <span class="tag">PIE · Inclusión</span>
+          <span class="tag">Sala SEM</span>
+          <span class="tag">Realidad Virtual</span>
+        </div>
+        <div class="hero-actions">
+          <a href="#pasos" class="btn-main" data-i18n-key="btn_start">✨ Ver pasos ahora</a>
+          <a href="quiz.html" class="btn-ghost">🧪 Quiz rápido</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="hero-visor-placeholder">
+          <p data-i18n-key="hero_img_label">
+            Aquí puedes agregar una foto de un estudiante (de espaldas o avatar) usando el visor,
+            con autorización de imagen.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cards-grid">
+      <article class="card emphasis" aria-labelledby="before-start-title">
+        <h2 id="before-start-title" data-i18n-key="before_start_title">Antes de comenzar</h2>
+        <ul>
+          <li data-i18n-key="before_start_1">Revisa que el visor esté limpio (especialmente las lentes).</li>
+          <li data-i18n-key="before_start_2">Comprueba que las correas estén sueltas para entrar con facilidad.</li>
+          <li data-i18n-key="before_start_3">Asegura un espacio libre de mesas, sillas u obstáculos.</li>
+          <li data-i18n-key="before_start_4">Si usas lentes ópticos, consulta al adulto responsable cómo colocarlos.</li>
+        </ul>
+      </article>
+
+      <article class="card" aria-labelledby="pie-context-title">
+        <h2 id="pie-context-title" data-i18n-key="pie_context_title">Pensado para el PIE</h2>
+        <p data-i18n-key="pie_context_text">
+          Esta guía fue diseñada para niñas y niños que aprenden de maneras diversas.
+          Incluye imágenes, pocos textos, narrador y controles de accesibilidad para
+          apoyar la comprensión paso a paso.
+        </p>
+        <p class="note">
+          Belén y el equipo PIE pueden adaptar el ritmo, repetir los pasos y usar apoyos visuales
+          adicionales según cada estudiante. 🤝
+        </p>
+      </article>
+
+      <article class="card" aria-labelledby="xr-options-title">
+        <h2 id="xr-options-title">Explora también en XR</h2>
+        <p>
+          Usa estos botones (opcional) para mostrar modelos 3D o ejemplos de uso del visor:
+        </p>
+        <div class="xr-buttons">
+          <a href="viewer3d/index.html" class="btn-chip">👁️ 3D</a>
+          <a href="viewerAR/index.html" class="btn-chip">📱 AR</a>
+          <a href="viewerVR/index.html" class="btn-chip">🥽 VR</a>
+          <a href="registro.html" class="btn-chip">✅ Registro CSV</a>
+          <a href="quiz.html" class="btn-chip">🧪 Quiz</a>
+          <a href="ticket.html" class="btn-chip">🎟️ Ticket de salida</a>
+        </div>
+      </article>
+    </section>
+
+    <section id="pasos" class="steps-section" aria-labelledby="steps-title">
+      <h2 id="steps-title" data-i18n-key="steps_title">Paso a paso: cómo colocar el visor</h2>
+      <p class="steps-intro" data-i18n-key="steps_intro">
+        Puedes seguir estos pasos con la ayuda de Belén u otro adulto. Lee primero el texto
+        y luego mira la imagen de apoyo.
+      </p>
+
+      <ol class="steps-list">
+        <li class="step-item">
+          <div class="step-text">
+            <h3>1. Mira el visor y conócelo</h3>
+            <p>
+              Observa el visor con calma. Mira dónde están las lentes, las correas y los botones.
+              Tócalo con tus manos para sentir su forma. Aún no lo pongas en tu cabeza.
+            </p>
+          </div>
+          <figure class="step-figure">
+            <img src="assets/img/paso1_conocer_visor.png" alt="Manos de un estudiante observando un visor de realidad virtual sobre la mesa." />
+            <figcaption>Ejemplo de imagen: visor sobre la mesa, manos señalando partes.</figcaption>
+          </figure>
+        </li>
+
+        <li class="step-item">
+          <div class="step-text">
+            <h3>2. Afloja las correas</h3>
+            <p>
+              Con ayuda del adulto, afloja las correas laterales y la correa superior.
+              Así será más fácil entrar con la cabeza y no sentir presión.
+            </p>
+          </div>
+          <figure class="step-figure">
+            <img src="assets/img/paso2_aflojar_correas.png" alt="Persona aflojando las correas laterales de un visor de realidad virtual." />
+            <figcaption>Ejemplo de imagen: correas abiertas y visibles.</figcaption>
+          </figure>
+        </li>
+
+        <li class="step-item">
+          <div class="step-text">
+            <h3>3. Apoya el visor en la frente</h3>
+            <p>
+              Toma el visor con ambas manos. Primero apóyalo suavemente en la frente,
+              justo encima de las cejas. Aún no lo bajes sobre los ojos.
+            </p>
+          </div>
+          <figure class="step-figure">
+            <img src="assets/img/paso3_frente.png" alt="Estudiante apoyando el visor en la frente, sin cubrir los ojos." />
+            <figcaption>Ejemplo de imagen: visor tocando la frente, ojos visibles.</figcaption>
+          </figure>
+        </li>
+
+        <li class="step-item">
+          <div class="step-text">
+            <h3>4. Baja el visor sobre los ojos</h3>
+            <p>
+              Desde la frente, baja lentamente el visor hasta cubrir los ojos.
+              Hazlo con calma, sin apretar. Si algo molesta, vuelve a subir y prueba otra vez.
+            </p>
+          </div>
+          <figure class="step-figure">
+            <img src="assets/img/paso4_bajar_ojos.png" alt="Visor siendo bajado desde la frente hasta cubrir los ojos del estudiante." />
+            <figcaption>Ejemplo de imagen: movimiento suave desde la frente hacia los ojos.</figcaption>
+          </figure>
+        </li>
+
+        <li class="step-item">
+          <div class="step-text">
+            <h3>5. Ajusta las correas</h3>
+            <p>
+              Cuando el visor ya está en los ojos, ajusta las correas poco a poco.
+              Debe quedar firme, pero cómodo. No debe doler ni dejar marcas fuertes.
+            </p>
+          </div>
+          <figure class="step-figure">
+            <img src="assets/img/paso5_ajustar_correas.png" alt="Adulto ajustando las correas del visor en la cabeza del estudiante." />
+            <figcaption>Ejemplo de imagen: adulto ajustando con cuidado las correas.</figcaption>
+          </figure>
+        </li>
+
+        <li class="step-item">
+          <div class="step-text">
+            <h3>6. Revisa que veas claro</h3>
+            <p>
+              Mira al frente. Si ves borroso, mareado o con molestias, avisa al adulto.
+              Se puede ajustar la distancia de las lentes (IPD) o volver a acomodar el visor.
+            </p>
+          </div>
+          <figure class="step-figure">
+            <img src="assets/img/paso6_enfoque.png" alt="Pantalla del visor mostrando imagen clara; estudiante levantando el pulgar en señal de que ve bien." />
+            <figcaption>Ejemplo de imagen: gesto de 'veo bien' con el pulgar hacia arriba.</figcaption>
+          </figure>
+        </li>
+
+        <li class="step-item">
+          <div class="step-text">
+            <h3>7. Señales para detenerse</h3>
+            <p>
+              Si sientes mareo, calor, miedo, o ganas de llorar, levanta la mano o di
+              una palabra de seguridad acordada con Belén (por ejemplo: “PAUSA”).
+              El adulto pausará la experiencia y te ayudará a quitar el visor lentamente.
+            </p>
+          </div>
+          <figure class="step-figure">
+            <img src="assets/img/paso7_pausa.png" alt="Estudiante levantando la mano para pedir una pausa durante la experiencia de realidad virtual." />
+            <figcaption>Ejemplo de imagen: mano levantada pidiendo pausa.</figcaption>
+          </figure>
+        </li>
+      </ol>
+    </section>
+
+    <section class="cards-grid">
+      <article class="card" aria-labelledby="hygiene-title">
+        <h2 id="hygiene-title">Higiene y cuidado del visor</h2>
+        <ul>
+          <li>Usa toallitas desinfectantes recomendadas para lentes (sin alcohol fuerte).</li>
+          <li>Deja que el visor se seque antes de usarlo con otro estudiante.</li>
+          <li>Guarda el visor en una caja o estuche limpio.</li>
+        </ul>
+      </article>
+
+      <article class="card" aria-labelledby="roles-title">
+        <h2 id="roles-title">Rol de Belén y del adulto a cargo</h2>
+        <p>
+          El adulto:
+        </p>
+        <ul>
+          <li>Explica la actividad con anticipación, usando apoyos visuales.</li>
+          <li>Ayuda a colocar y retirar el visor con calma.</li>
+          <li>Observa las reacciones del estudiante durante toda la experiencia.</li>
+          <li>Registra en <strong>✅ Registro CSV</strong> cómo le fue a cada estudiante.</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-left">
+      <span class="footer-logo-placeholder">
+        Aquí va el logo del Liceo / PIE (imagen pequeña).
+      </span>
+    </div>
+    <div class="footer-center">
+      <p>
+        Sala SEM · Programa de Integración Escolar (PIE) · Liceo Bicentenario de Excelencia Polivalente San Nicolás.
+      </p>
+      <p class="footer-small">
+        Repositorio educativo inclusivo para uso pedagógico interno. Desarrollado junto a Belén Acuña y Francisco Pinto.
+      </p>
+    </div>
+    <div class="footer-right">
+      <span class="tag">Inclusión</span>
+      <span class="tag">Realidad Virtual</span>
+      <span class="tag">Neurodiversidad</span>
+    </div>
+  </footer>
+
+  <div id="search-dialog" class="search-dialog" aria-hidden="true">
+    <div class="search-dialog-content">
+      <label for="search-input">Buscar en esta página</label>
+      <input type="text" id="search-input" placeholder="Escribe una palabra clave..." />
+      <button id="search-close">Cerrar</button>
+      <div id="search-results"></div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

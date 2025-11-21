@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>🎟️ Ticket de salida VR</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body class="dark-theme">
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="btn-icon" onclick="location.href='index.html'">🏠</button>
+      <span class="brand"><strong>Ticket de salida</strong><br/><small>Experiencia VR Sala SEM</small></span>
+    </div>
+  </header>
+  <main id="main-content">
+    <section class="cards-grid">
+      <article class="card">
+        <h2>🎟️ ¿Cómo me sentí con el visor?</h2>
+        <p>Elige un carita y, si quieres, escribe o dibuja cómo te sentiste.</p>
+        <div style="display:flex;gap:0.6rem;flex-wrap:wrap;">
+          <button class="btn-main" onclick="setFace('feliz')">😊 Me gustó mucho</button>
+          <button class="btn-ghost" onclick="setFace('normal')">😐 Más o menos</button>
+          <button class="btn-ghost" onclick="setFace('triste')">😟 No me sentí bien</button>
+        </div>
+        <br/>
+        <label>
+          Comentario breve (puede escribir Belén)<br/>
+          <textarea id="ticket-text" rows="3"></textarea>
+        </label>
+        <br/><br/>
+        <button class="btn-chip" onclick="saveTicket()">💾 Guardar como texto</button>
+        <p id="ticket-msg" style="font-size:0.8rem;margin-top:0.4rem;"></p>
+      </article>
+    </section>
+  </main>
+  <script>
+    let selectedFace = '';
+    function setFace(face) {
+      selectedFace = face;
+      document.getElementById('ticket-msg').textContent = 'Seleccionaste: ' + face + '. Ahora puedes escribir un comentario.';
+    }
+    function saveTicket() {
+      if (!selectedFace) {
+        alert('Elige una carita primero.');
+        return;
+      }
+      const txt = document.getElementById('ticket-text').value.trim().replace(/(\r|\n)+/g,' ');
+      const line = `carita=${selectedFace}, comentario="${txt}"`;
+      const blob = new Blob([line], { type: 'text/plain;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      const today = new Date().toISOString().slice(0,10).replace(/-/g,'');
+      a.href = url;
+      a.download = `ticket_salida_vr_${today}.txt`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      document.getElementById('ticket-msg').textContent = 'Ticket guardado. Puedes subirlo o guardarlo en tu carpeta digital.';
+    }
+  </script>
+</body>
+</html>

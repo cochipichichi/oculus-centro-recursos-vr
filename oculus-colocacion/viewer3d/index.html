@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>👁️ Vista 3D · Uso del visor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body class="dark-theme">
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="btn-icon" onclick="location.href='../index.html'">🏠</button>
+      <span class="brand"><strong>Vista 3D</strong><br/><small>Modelo ejemplo · visor en la cabeza</small></span>
+    </div>
+  </header>
+  <main id="main-content">
+    <section class="cards-grid">
+      <article class="card">
+        <h2>👁️ Modelo 3D del visor</h2>
+        <p>
+          Aquí puedes cargar un modelo 3D de un estudiante (avatar) usando el visor Oculus / Meta Quest.
+          Reemplaza el archivo <code>assets/models/visor_kid.glb</code> por tu propio modelo.
+        </p>
+        <model-viewer src="../assets/models/visor_kid.glb"
+          alt="Modelo 3D de un estudiante usando visor VR"
+          auto-rotate
+          camera-controls
+          ar
+          style="width:100%;height:320px;border-radius:18px;border:1px solid rgba(148,163,184,.6);background:#020617;">
+        </model-viewer>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

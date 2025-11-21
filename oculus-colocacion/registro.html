@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>✅ Registro de uso · Sala SEM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body class="dark-theme">
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="btn-icon" onclick="location.href='index.html'">🏠</button>
+      <span class="brand"><strong>Registro CSV</strong><br/><small>Uso de visor Oculus / Meta Quest</small></span>
+    </div>
+  </header>
+  <main id="main-content">
+    <section class="cards-grid">
+      <article class="card">
+        <h2>✅ Registro de estudiantes</h2>
+        <p>Belén puede usar este formulario para registrar cómo le fue a cada estudiante.</p>
+        <form id="reg-form">
+          <label>
+            Nombre estudiante<br/>
+            <input type="text" id="nombre" required />
+          </label><br/><br/>
+          <label>
+            Curso<br/>
+            <input type="text" id="curso" placeholder="Ej: 5°B" />
+          </label><br/><br/>
+          <label>
+            Fecha<br/>
+            <input type="date" id="fecha" />
+          </label><br/><br/>
+          <label>
+            Nivel de apoyo<br/>
+            <select id="apoyo">
+              <option value="independiente">Se coloca el visor de forma independiente</option>
+              <option value="con_apoyo">Necesita apoyo parcial</option>
+              <option value="apoyo_total">Necesita apoyo total</option>
+            </select>
+          </label><br/><br/>
+          <label>
+            Observaciones (reacciones, emociones, acuerdos, etc.)<br/>
+            <textarea id="obs" rows="3"></textarea>
+          </label><br/><br/>
+          <button type="button" class="btn-main" id="btn-add">➕ Agregar fila</button>
+          <button type="button" class="btn-ghost" id="btn-download">💾 Descargar CSV</button>
+        </form>
+      </article>
+      <article class="card">
+        <h2>📊 Registros actuales</h2>
+        <table id="reg-table" style="width:100%;font-size:0.78rem;border-collapse:collapse;">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Curso</th>
+              <th>Fecha</th>
+              <th>Apoyo</th>
+              <th>Observaciones</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </article>
+    </section>
+  </main>
+  <script>
+    const rows = [];
+    const addBtn = document.getElementById('btn-add');
+    const downloadBtn = document.getElementById('btn-download');
+    const tbody = document.querySelector('#reg-table tbody');
+    function addRow() {
+      const nombre = document.getElementById('nombre').value.trim();
+      const curso = document.getElementById('curso').value.trim();
+      const fecha = document.getElementById('fecha').value;
+      const apoyo = document.getElementById('apoyo').value;
+      const obs = document.getElementById('obs').value.trim().replace(/(\r|\n)+/g, ' ');
+      if (!nombre) {
+        alert('Escribe el nombre del estudiante.');
+        return;
+      }
+      const row = { nombre, curso, fecha, apoyo, obs };
+      rows.push(row);
+      const tr = document.createElement('tr');
+      tr.innerHTML = `<td>${nombre}</td><td>${curso}</td><td>${fecha}</td><td>${apoyo}</td><td>${obs}</td>`;
+      tbody.appendChild(tr);
+      document.getElementById('reg-form').reset();
+    }
+    function downloadCSV() {
+      if (!rows.length) {
+        alert('No hay filas para descargar.');
+        return;
+      }
+      const header = ['Nombre','Curso','Fecha','Apoyo','Observaciones'];
+      const lines = [header.join(',')];
+      rows.forEach(r => {
+        const line = [
+          r.nombre.replace(/,/g, ';'),
+          r.curso.replace(/,/g, ';'),
+          r.fecha,
+          r.apoyo.replace(/,/g, ';'),
+          r.obs.replace(/,/g, ';')
+        ].join(',');
+        lines.push(line);
+      });
+      const blob = new Blob([lines.join('\n')], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      const today = new Date().toISOString().slice(0,10).replace(/-/g,'');
+      a.href = url;
+      a.download = `registro_visor_sem_${today}.csv`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+    if (addBtn) addBtn.addEventListener('click', addRow);
+    if (downloadBtn) downloadBtn.addEventListener('click', downloadCSV);
+  </script>
+</body>
+</html>

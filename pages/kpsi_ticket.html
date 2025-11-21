@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>KPSI y ticket de salida VR · Centro VR Inclusivo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-left">
+    <div class="brand-logo">
+      <img src="../assets/img/logo_NEOTECH-EDULAB.png" alt="Neotech EduLab" />
+    </div>
+    <div class="brand-title">
+      <strong>KPSI y ticket de salida VR</strong>
+      <small>✅ Reflexión, autocuidado y metacognición</small>
+    </div>
+  </div>
+  <div class="topbar-right">
+    <button class="btn-icon" onclick="location.href='../index.html'">🏠</button>
+    <button class="btn-icon" id="btn-voice">🗣️</button>
+    <button class="btn-icon" id="btn-theme">🌓</button>
+    <button class="btn-icon" id="btn-font-inc">A+</button>
+    <button class="btn-icon" id="btn-font-dec">A−</button>
+  </div>
+</header>
+
+<main id="main-content" class="page-main">
+  <section class="card">
+    <span class="info-badge">🧠 KPSI adaptado para experiencias VR en PIE y Sala SEM</span>
+    <h1>Inventario de conocimientos previos (KPSI) y ticket de salida para VR</h1>
+    <p>
+      Este instrumento permite que los estudiantes expresen cuánto creen saber antes y después de una
+      experiencia de realidad virtual. Está pensado para ser usado de forma breve, respetuosa y sin
+      generar ansiedad por la nota.
+    </p>
+    <p>
+      Puedes aplicarlo en formato digital o imprimir la ficha en PDF para trabajar en papel, junto a
+      las familias o en la sala de clases.
+    </p>
+    <p>
+      <a class="btn-pill soft" href="../docs/kpsi_ticket_VR.pdf" target="_blank">📄 Descargar versión PDF imprimible</a>
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>✅ Parte 1: KPSI antes de la experiencia VR</h2>
+    <p>
+      El estudiante marca cómo se siente respecto a cada afirmación <strong>antes</strong> de usar el visor.
+      Se puede aplicar de forma oral, con apoyo de pictogramas o con acompañamiento del equipo PIE.
+    </p>
+
+    <table style="width:100%;border-collapse:collapse;font-size:0.85rem;margin-top:0.6rem;">
+      <thead>
+        <tr>
+          <th style="border-bottom:1px solid rgba(148,163,184,0.6);text-align:left;padding:0.3rem;">Afirmación</th>
+          <th style="border-bottom:1px solid rgba(148,163,184,0.6);padding:0.3rem;">😀 Lo sé bien y puedo explicarlo</th>
+          <th style="border-bottom:1px solid rgba(148,163,184,0.6);padding:0.3rem;">😕 Lo he visto, pero no estoy seguro/a</th>
+          <th style="border-bottom:1px solid rgba(148,163,184,0.6);padding:0.3rem;">😶 No lo conozco todavía</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding:0.3rem;">1. Sé qué es un visor de realidad virtual y para qué sirve.</td>
+          <td style="text-align:center;"><input type="radio" name="pre1" /></td>
+          <td style="text-align:center;"><input type="radio" name="pre1" /></td>
+          <td style="text-align:center;"><input type="radio" name="pre1" /></td>
+        </tr>
+        <tr>
+          <td style="padding:0.3rem;">2. Conozco la palabra clave PAUSA y cuándo usarla.</td>
+          <td style="text-align:center;"><input type="radio" name="pre2" /></td>
+          <td style="text-align:center;"><input type="radio" name="pre2" /></td>
+          <td style="text-align:center;"><input type="radio" name="pre2" /></td>
+        </tr>
+        <tr>
+          <td style="padding:0.3rem;">3. Identifico los botones principales de los controles VR (joystick, gatillo, grip).</td>
+          <td style="text-align:center;"><input type="radio" name="pre3" /></td>
+          <td style="text-align:center;"><input type="radio" name="pre3" /></td>
+          <td style="text-align:center;"><input type="radio" name="pre3" /></td>
+        </tr>
+        <tr>
+          <td style="padding:0.3rem;">4. Sé que el visor se usa por poco tiempo para cuidar mi cuerpo y mis ojos.</td>
+          <td style="text-align:center;"><input type="radio" name="pre4" /></td>
+          <td style="text-align:center;"><input type="radio" name="pre4" /></td>
+          <td style="text-align:center;"><input type="radio" name="pre4" /></td>
+        </tr>
+        <tr>
+          <td style="padding:0.3rem;">5. Conozco el tema de la experiencia VR (por ejemplo: sistema nervioso).</td>
+          <td style="text-align:center;"><input type="radio" name="pre5" /></td>
+          <td style="text-align:center;"><input type="radio" name="pre5" /></td>
+          <td style="text-align:center;"><input type="radio" name="pre5" /></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>🎫 Parte 2: Ticket de salida después de la experiencia VR</h2>
+    <p>
+      Al terminar la experiencia, el ticket de salida ayuda a recoger impresiones rápidas y a
+      promover la metacognición: qué aprendí, cómo me sentí y qué me gustaría mejorar.
+    </p>
+
+    <div class="info-grid">
+      <article class="info-card">
+        <h3>🧠 1. Algo que aprendí hoy</h3>
+        <p style="font-size:0.85rem;">Escribe o dibuja una idea importante que recuerdes de la experiencia VR.</p>
+        <textarea style="width:100%;min-height:80px;background:rgba(15,23,42,0.9);color:var(--text);border-radius:0.75rem;border:1px solid rgba(148,163,184,0.6);padding:0.4rem;"></textarea>
+      </article>
+
+      <article class="info-card">
+        <h3>💚 2. Cómo me sentí</h3>
+        <p style="font-size:0.85rem;">Marca o describe cómo te sentiste durante la experiencia.</p>
+        <p style="font-size:1.3rem;">😀 😃 🙂 😐 😕 😢 😣</p>
+        <textarea style="width:100%;min-height:60px;background:rgba(15,23,42,0.9);color:var(--text);border-radius:0.75rem;border:1px solid rgba(148,163,184,0.6);padding:0.4rem;" placeholder="Me sentí... porque..."></textarea>
+      </article>
+
+      <article class="info-card">
+        <h3>🔄 3. Para la próxima vez…</h3>
+        <p style="font-size:0.85rem;">Escribe una sugerencia para mejorar la experiencia VR para ti o para tus compañeros.</p>
+        <textarea style="width:100%;min-height:80px;background:rgba(15,23,42,0.9);color:var(--text);border-radius:0.75rem;border:1px solid rgba(148,163,184,0.6);padding:0.4rem;"></textarea>
+      </article>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>👩‍🏫 Versión docente · Observaciones rápidas</h2>
+    <p>
+      Esta sección está pensada para que el docente o el equipo PIE registren observaciones durante
+      la sesión: uso de la palabra PAUSA, necesidad de apoyo físico, reacciones emocionales y logros
+      destacados.
+    </p>
+    <ul>
+      <li>¿El estudiante pidió PAUSA? ¿En qué momento y por qué motivo aparente?</li>
+      <li>¿Necesitó ayuda adicional para manipular los controles o el visor?</li>
+      <li>¿Mostró entusiasmo, curiosidad, miedo, fatiga u otras emociones relevantes?</li>
+      <li>¿Qué ajustes harías en la próxima sesión para ese estudiante o grupo?</li>
+    </ul>
+  </section>
+</main>
+
+<footer class="footer">
+  <span>Centro VR Inclusivo · KPSI y ticket de salida VR</span>
+  <span class="footer-logo"><img src="../assets/img/logo_NEOTECH-EDULAB.png" alt="Neotech EduLab" /></span>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
