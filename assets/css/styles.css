@@ -560,3 +560,35 @@ html.light .btn-pill {
 html.light .footer {
   border-top-color: rgba(148,163,184,0.7);
 }
+
+
+/* VR helmet micro-animation */
+.vr-helmet-float {
+  animation: vrFloat 3.2s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.vr-helmet-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.12rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid rgba(56,189,248,0.65);
+  background: radial-gradient(circle at top, rgba(15,23,42,0.98), rgba(15,23,42,0.7));
+  font-size: 0.76rem;
+  color: var(--text-soft);
+}
+
+.vr-helmet-badge img {
+  height: 20px;
+  filter: drop-shadow(0 0 8px rgba(56,189,248,0.85));
+}
+
+@keyframes vrFloat {
+  0% { transform: translateY(0px); }
+  25% { transform: translateY(-3px); }
+  50% { transform: translateY(0px); }
+  75% { transform: translateY(2px); }
+  100% { transform: translateY(0px); }
+}
