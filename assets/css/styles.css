@@ -65,6 +65,19 @@ a:hover {
   gap: 0.65rem;
 }
 
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.15rem 0.4rem;
+  border-radius: 999px;
+  background: rgba(15,23,42,0.9);
+}
+
+.brand-logo img {
+  height: 28px;
+}
+
 .topbar-right {
   display: inline-flex;
   align-items: center;
@@ -313,6 +326,11 @@ main {
   justify-content: space-between;
   gap: 0.6rem;
   border-top: 1px solid rgba(30, 64, 175, 0.8);
+  align-items: center;
+}
+
+.footer-logo img {
+  height: 22px;
 }
 
 /* Page layouts */
@@ -327,6 +345,7 @@ main {
   font-size: 1.2rem;
 }
 
+/* Lists & badges */
 .step-list {
   counter-reset: step;
   list-style: none;

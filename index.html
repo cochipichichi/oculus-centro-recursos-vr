@@ -2,20 +2,28 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Centro VR Inclusivo · Visor, Controles, Familias y Docentes</title>
+  <title>Centro VR Inclusivo · Neotech EduLab</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
 <header class="topbar">
   <div class="topbar-left">
-    <button class="btn-icon" onclick="location.href='index.html'">🏠</button>
+    <div class="brand-logo">
+      <img src="assets/img/logo_NEOTECH-EDULAB.png" alt="Neotech EduLab" />
+    </div>
     <div class="brand-title">
       <strong>Centro VR Inclusivo</strong>
       <small>Colocación segura · Controles · Familias · Docentes</small>
     </div>
   </div>
   <div class="topbar-right">
+    <div id="lang-select" style="display:none;gap:0.25rem;">
+      <button class="btn-icon" data-lang="es">ES</button>
+      <button class="btn-icon" data-lang="en">EN</button>
+      <button class="btn-icon" data-lang="arn">MAPU</button>
+    </div>
+    <button class="btn-icon" id="btn-lang">🌐</button>
     <button class="btn-icon" id="btn-voice">🗣️</button>
     <button class="btn-icon" id="btn-theme">🌓</button>
     <button class="btn-icon" id="btn-font-inc">A+</button>
@@ -27,13 +35,14 @@
   <section class="hero-grid">
     <article class="card">
       <div class="hero-badge">
-        🥽 VR segura · 🧩 PIE · 🧠 Sala SEM
+        🥽 VR segura · 🧩 PIE · 🧠 Sala SEM · 🌈 Neurodiversidad
       </div>
       <h1 class="hero-title">Centro VR inclusivo para estudiantes, familias y docentes</h1>
       <p>
-        Este sitio reúne todo lo necesario para usar el visor Oculus / Meta Quest de forma segura,
-        cariñosa e inclusiva: colocación del visor, explicación de los controles con pictogramas,
-        fichas imprimibles, información para familias y un espacio de capacitación docente.
+        Este sitio reúne protocolos, fichas y apoyos visuales para que el uso de Oculus / Meta Quest
+        sea una experiencia <strong>educativa, segura y amorosa</strong>. Aquí encontrarás cómo colocar
+        bien el visor, entender los controles, preparar a las familias y acompañar a tus estudiantes
+        desde el PIE y la Sala SEM.
       </p>
       <div class="hero-actions">
         <a href="pages/colocacion.html" class="btn-pill primary">🥽 Colocación segura del visor</a>
@@ -41,8 +50,8 @@
         <a href="fichas/index.html" class="btn-pill soft">🧩 Fichas con pictogramas</a>
       </div>
       <p class="hero-meta">
-        Diseñado para el Programa de Integración Escolar (PIE) y la Sala SEM, pero útil para cualquier
-        comunidad educativa que quiera cuidar a sus estudiantes mientras exploran la realidad virtual.
+        Diseñado por Neotech EduLab junto a comunidades educativas que creen en la inclusión, la
+        tecnología con sentido y el cuidado emocional de cada estudiante.
       </p>
     </article>
 
@@ -93,7 +102,7 @@
           </div>
           <div class="card-nav-body">
             Una sola lámina para anticipar la experiencia VR: preparación, uso del visor, palabra PAUSA
-            y cierre reflexivo.
+            y cierre reflexivo en grupo.
           </div>
           <div class="card-nav-footer">
             Descargar secuencia A3 →
@@ -117,12 +126,13 @@
           <span class="card-nav-emoji">🥽</span>
           <div class="card-nav-title">
             <strong>Colocación segura del visor</strong>
-            <small>Paso a paso visual</small>
+            <small>Paso a paso visual y emocional</small>
           </div>
         </div>
         <p class="card-nav-body">
-          Una guía visual y escrita, pensada para estudiantes, con pasos claros, emojis y lenguaje
-          sencillo. Incluye advertencias de seguridad y la palabra clave <strong>PAUSA</strong>.
+          Un protocolo completo que combina seguridad física, cuidado sensorial y acompañamiento
+          emocional. Incluye la palabra clave <strong>PAUSA</strong> para que el estudiante pueda
+          detener la experiencia cuando lo necesite.
         </p>
       </article>
 
@@ -131,12 +141,12 @@
           <span class="card-nav-emoji">🎮</span>
           <div class="card-nav-title">
             <strong>Controles VR con pictogramas</strong>
-            <small>Vista frontal, gatillo, grip y más</small>
+            <small>Joystick, gatillo, grip y más</small>
           </div>
         </div>
         <p class="card-nav-body">
-          Fichas interactivas y PDFs listos para imprimir, con pictogramas (ARASAAC), textos bilingües
-          y narrador integrado para estudiantes no lectores.
+          Explicación clara de cada botón, relación con la motricidad fina y propuestas para practicar
+          primero sin visor. Ideal para 6° básico y 1° medio con apoyo del PIE.
         </p>
       </article>
 
@@ -149,8 +159,8 @@
           </div>
         </div>
         <p class="card-nav-body">
-          Sitio y ficha en PDF para apoderados, donde se explica cómo, cuánto y para qué se usa
-          el visor en la sala, invitando a conversar en casa sobre lo vivido.
+          Ficha y materiales para que madres, padres y cuidadores entiendan cómo se usa el visor,
+          por qué el tiempo es limitado y cómo conversar en casa sobre lo vivido.
         </p>
       </article>
 
@@ -163,8 +173,8 @@
           </div>
         </div>
         <p class="card-nav-body">
-          Módulos que orientan a planificar, aplicar y evaluar experiencias VR, con foco en
-          neurodiversidad, seguridad, tiempos de exposición y registro de evidencias.
+          Módulos para equipos docentes que quieren integrar VR a proyectos de aula, con foco en
+          neurodiversidad, tiempos seguros y evaluación auténtica.
         </p>
       </article>
     </div>
@@ -172,8 +182,8 @@
 </main>
 
 <footer class="footer">
-  <span>Neotech EduLab · Liceo Bicentenario · Programa de Integración Escolar</span>
-  <span>Centro VR Inclusivo · Versión 1</span>
+  <span>Centro VR Inclusivo · Neotech EduLab</span>
+  <span class="footer-logo"><img src="assets/img/logo_NEOTECH-EDULAB.png" alt="Neotech EduLab" /></span>
 </footer>
 
 <script src="assets/js/main.js"></script>

@@ -52,4 +52,19 @@ document.addEventListener('DOMContentLoaded', () => {
       applyFont();
     });
   }
+
+  const btnLang = document.getElementById('btn-lang');
+  const langSelect = document.getElementById('lang-select');
+  if (btnLang && langSelect) {
+    btnLang.addEventListener('click', () => {
+      langSelect.style.display = langSelect.style.display === 'flex' ? 'none' : 'flex';
+    });
+    langSelect.querySelectorAll('button[data-lang]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.getAttribute('data-lang');
+        document.documentElement.setAttribute('lang', lang);
+        langSelect.style.display = 'none';
+      });
+    });
+  }
 });
