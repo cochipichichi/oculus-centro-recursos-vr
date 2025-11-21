@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>🧪 Quiz · Controles Oculus / Meta Quest</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-left">
+    <button class="btn-icon" onclick="location.href='../index.html'">🏠</button>
+    <span class="brand">
+      <strong>Quiz de seguridad</strong><br/>
+      <small>6° básico · Sala SEM</small>
+    </span>
+  </div>
+</header>
+
+<main id="main-content">
+  <section class="cards-grid">
+    <article class="card">
+      <h2>🧪 Quiz: ¿conozco los controles?</h2>
+      <p>Este quiz es para responder con calma. Puedes leerlo en voz alta o pedir que el adulto lo lea.</p>
+      <form id="quiz-form">
+        <div class="question">
+          <p>1. ¿Qué botón uso con el dedo índice para seleccionar o tomar objetos?</p>
+          <label><input type="radio" name="q1" value="a" /> El botón Grip.</label><br/>
+          <label><input type="radio" name="q1" value="b" /> El gatillo (Trigger).</label>
+        </div>
+        <div class="question">
+          <p>2. Si me siento mareado o incómodo con el visor, debo...</p>
+          <label><input type="radio" name="q2" value="a" /> Seguir jugando sin decir nada.</label><br/>
+          <label><input type="radio" name="q2" value="b" /> Levantar la mano o decir la palabra “PAUSA”.</label>
+        </div>
+        <div class="question">
+          <p>3. ¿Para qué sirve el botón Oculus?</p>
+          <label><input type="radio" name="q3" value="a" /> Para volver al menú principal del visor.</label><br/>
+          <label><input type="radio" name="q3" value="b" /> Para subir el volumen al máximo.</label>
+        </div>
+        <button type="submit" class="btn-main" style="margin-top:0.7rem;">Revisar respuestas</button>
+      </form>
+      <p id="quiz-result" style="margin-top:0.7rem;font-size:0.86rem;"></p>
+    </article>
+  </section>
+</main>
+
+<script>
+  const form = document.getElementById('quiz-form');
+  const result = document.getElementById('quiz-result');
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      let score = 0;
+      if (form.q1.value === 'b') score++;
+      if (form.q2.value === 'b') score++;
+      if (form.q3.value === 'a') score++;
+      if (score === 3) {
+        result.textContent = '🌟 ¡Excelente! Estás listo para usar los controles con seguridad.';
+      } else if (score === 2) {
+        result.textContent = '👍 Muy bien. Podemos repasar juntos la pregunta que faltó.';
+      } else {
+        result.textContent = '🙂 Vamos a leer de nuevo la guía y las fichas antes de usar el visor.';
+      }
+    });
+  }
+</script>
+<footer class="footer">
+  <span>Centro de Recursos VR Inclusivos · Neotech EduLab</span>
+  <span class="footer-logo"><img src="../assets/img/logo_NEOTECH-EDULAB.png" alt="Neotech EduLab" /></span>
+</footer>
+</body>
+</html>

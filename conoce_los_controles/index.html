@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Controles Oculus / Meta Quest · 6° Básico</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="topbar" aria-label="Barra superior">
+    <div class="topbar-left">
+      <button class="btn-icon" id="btn-home" aria-label="Ir al inicio">🏠</button>
+      <span class="brand">
+        <strong data-i18n-key="title">Controles Oculus / Meta Quest para 6° básico</strong><br/>
+        <small data-i18n-key="subtitle">Sala SEM · Estimulación sensorial y tecnológica</small>
+      </span>
+    </div>
+    <div class="topbar-right" aria-label="Controles inclusivos">
+      <button class="btn-icon" id="btn-voice" title="Narrador" aria-label="Leer en voz alta">🗣️</button>
+      <button class="btn-icon" id="btn-theme" title="Cambiar tema" aria-label="Cambiar tema claro/oscuro">🌓</button>
+      <button class="btn-icon" id="btn-font-inc" title="Aumentar letra" aria-label="Aumentar tamaño de letra">A+</button>
+      <button class="btn-icon" id="btn-font-dec" title="Disminuir letra" aria-label="Disminuir tamaño de letra">A−</button>
+      <div class="lang-switcher">
+        <button class="btn-icon" id="btn-lang" aria-haspopup="true" aria-expanded="false" title="Cambiar idioma">🌐</button>
+        <ul class="lang-menu" id="lang-menu" aria-label="Idiomas">
+          <li data-lang="es">🇨🇱 Español</li>
+          <li data-lang="en">🇬🇧 English</li>
+          <li data-lang="arn">🏳️ Mapudungun*</li>
+        </ul>
+      </div>
+      <button class="btn-icon" id="btn-guide" title="Ir a controles" aria-label="Ir a la sección de controles">🧠</button>
+      <button class="btn-icon" id="btn-search" title="Buscar en la página" aria-label="Buscar">🔍</button>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero">
+      <div class="hero-text">
+        <h1 data-i18n-key="hero_title">Conoce los controles del visor</h1>
+        <p data-i18n-key="hero_intro">
+          En esta guía aprenderás dónde están los botones de los controles Oculus / Meta Quest
+          y para qué sirven, para usar el visor de forma segura y tranquila en la Sala SEM.
+        </p>
+        <p data-i18n-key="hero_time">
+          Tiempo máximo recomendado: 10 a 20 minutos por sesión, siempre acompañado de un adulto.
+        </p>
+        <div class="hero-tags">
+          <span class="tag">6° Básico</span>
+          <span class="tag">Sala SEM</span>
+          <span class="tag">PIE · Inclusión</span>
+        </div>
+        <div class="hero-actions">
+          <a href="#controles" class="btn-main" data-i18n-key="btn_start">✨ Ver botones principales</a>
+          <a href="fichas/index.html" class="btn-ghost">🧩 Ver fichas pictogramas</a>
+        </div>
+      </div>
+      <div class="hero-graphic">
+        <p>
+          Aquí puedes reemplazar con una imagen real de los controles o un pictograma oficial
+          (por ejemplo, de ARASAAC), para mostrar a tus estudiantes cómo se ve el control.
+        </p>
+        <p style="font-size:0.78rem;margin-top:0.5rem;">
+          📌 Sugerencia: usar fotografías con fondo neutro o pictogramas claros en blanco y negro
+          para estudiantes con alta sensibilidad sensorial.
+        </p>
+      </div>
+    </section>
+
+    <section class="cards-grid">
+      <article class="card highlight">
+        <h2>Normas básicas de uso</h2>
+        <ul>
+          <li>Uso máximo recomendado: <strong>10–20 minutos</strong> por sesión.</li>
+          <li>Siempre estar acompañado de un adulto (Belén u otro responsable).</li>
+          <li>Si hay mareo, calor, miedo o incomodidad → <strong>PAUSA inmediata</strong>.</li>
+          <li>Se puede usar una palabra clave (por ejemplo: <strong>“PAUSA”</strong>) para detener la experiencia.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h2>Recursos del repositorio</h2>
+        <ul>
+          <li>Guía visual de los botones del control.</li>
+          <li>Fichas tipo pictograma, listas para imprimir.</li>
+          <li>Quiz rápido sobre uso seguro de los controles.</li>
+          <li>Registro CSV para evidencias de uso.</li>
+          <li>Ticket de salida emocional.</li>
+          <li>Guía docente con secuencia didáctica sugerida.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h2>Atajos</h2>
+        <p>Puedes ir directamente a:</p>
+        <div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
+          <a href="fichas/index.html" class="btn-chip">🧩 Fichas pictogramas</a>
+          <a href="pages/quiz.html" class="btn-chip">🧪 Quiz</a>
+          <a href="pages/registro.html" class="btn-chip">✅ Registro CSV</a>
+          <a href="pages/ticket.html" class="btn-chip">🎟️ Ticket de salida</a>
+          <a href="pages/docente.html" class="btn-chip">👩‍🏫 Guía docente</a>
+        </div>
+      </article>
+    </section>
+
+    <section id="controles">
+      <h2>Botones principales del control</h2>
+      <p style="font-size:0.9rem;color:var(--text-soft);margin-bottom:0.7rem;">
+        Recuerda que hay dos controles: uno para la mano derecha y otro para la mano izquierda.
+        Los botones son muy parecidos, pero pueden cambiar de letra (A/B y X/Y).
+      </p>
+      <div class="controls-grid">
+        <article class="control-card">
+          <div>
+            <h3>Vista frontal</h3>
+            <p>
+              Aquí vemos el <strong>joystick</strong> y los botones principales (A / B o X / Y).
+              Con el joystick te mueves o apuntas. Con los botones confirmas, saltas o abres opciones.
+            </p>
+          </div>
+          <div class="control-img">
+            <img src="assets/img/ficha_control_frontal.png" alt="Pictograma vista frontal del control de realidad virtual" />
+            <div>Reemplazar con pictograma o foto real de frente.</div>
+          </div>
+        </article>
+
+        <article class="control-card">
+          <div>
+            <h3>Gatillo (Trigger)</h3>
+            <p>
+              Se usa con el dedo índice. Es como hacer un “clic” con el mouse. Sirve para
+              seleccionar, tomar o apuntar.
+            </p>
+          </div>
+          <div class="control-img">
+            <img src="assets/img/ficha_trigger.png" alt="Pictograma resaltando el gatillo del control" />
+            <div>Indicar con color el botón que se aprieta con el índice.</div>
+          </div>
+        </article>
+
+        <article class="control-card">
+          <div>
+            <h3>Botón Grip (Agarrar)</h3>
+            <p>
+              Se aprieta con los dedos del costado. Sirve para <strong>agarrar</strong> objetos,
+              abrir puertas o sostener herramientas dentro del juego.
+            </p>
+          </div>
+          <div class="control-img">
+            <img src="assets/img/ficha_grip.png" alt="Pictograma resaltando el botón grip del control" />
+            <div>Mostrar mano cerrando el control como si lo sujetara fuerte.</div>
+          </div>
+        </article>
+
+        <article class="control-card">
+          <div>
+            <h3>Botón Menú</h3>
+            <p>
+              Abre las opciones de la aplicación o juego. Normalmente lo usa el adulto para
+              cambiar configuraciones.
+            </p>
+          </div>
+          <div class="control-img">
+            <img src="assets/img/ficha_menu.png" alt="Pictograma del botón de menú en el control" />
+            <div>Marcar el botón de menú con un icono de engranaje.</div>
+          </div>
+        </article>
+
+        <article class="control-card">
+          <div>
+            <h3>Botón Oculus</h3>
+            <p>
+              Abre el menú principal del visor. Sirve para pausar lo que estás haciendo y volver
+              al “inicio” del Oculus / Meta Quest.
+            </p>
+          </div>
+          <div class="control-img">
+            <img src="assets/img/ficha_oculus.png" alt="Pictograma del botón Oculus" />
+            <div>Usar el símbolo de Oculus / Meta para que sea reconocible.</div>
+          </div>
+        </article>
+
+        <article class="control-card">
+          <div>
+            <h3>Tiempo y PAUSA</h3>
+            <p>
+              Usamos el visor poco tiempo (10–20 minutos). Si sientes mareo, susto, calor
+              o ganas de llorar, puedes levantar la mano o decir la palabra clave <strong>PAUSA</strong>.
+            </p>
+          </div>
+          <div class="control-img">
+            <img src="assets/img/ficha_pausa.png" alt="Pictograma de niño levantando la mano para pedir pausa" />
+            <div>Pictograma de mano levantada + reloj marcando poco tiempo.</div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <span class="footer-logo-placeholder">
+        Logo Liceo / Programa PIE aquí.
+      </span>
+    </div>
+    <div>
+      <p>Sala SEM · Programa de Integración Escolar (PIE) · Liceo Bicentenario de Excelencia Polivalente San Nicolás.</p>
+      <p class="footer-small">
+        Repositorio educativo inclusivo para 6° básico. Uso interno pedagógico. Desarrollado junto a Belén Acuña y Francisco Pinto.
+      </p>
+    </div>
+    <div class="footer-right">
+      <span class="tag">Inclusión</span>
+      <span class="tag">Realidad Virtual</span>
+      <span class="tag">Neurodiversidad</span>
+    </div>
+  </footer>
+
+  <div id="search-dialog" class="search-dialog" aria-hidden="true">
+    <div class="search-dialog-content">
+      <label for="search-input">Buscar en esta página</label>
+      <input id="search-input" type="text" placeholder="Escribe una palabra..." />
+      <button id="search-close">Cerrar</button>
+      <div id="search-results"></div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+<footer class="footer">
+  <span>Centro de Recursos VR Inclusivos · Neotech EduLab</span>
+  <span class="footer-logo"><img src="../assets/img/logo_NEOTECH-EDULAB.png" alt="Neotech EduLab" /></span>
+</footer>
+</body>
+</html>
