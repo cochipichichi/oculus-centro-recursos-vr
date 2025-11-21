@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Centro VR Inclusivo · Visor, Controles, Familias y Docentes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-left">
+    <button class="btn-icon" onclick="location.href='index.html'">🏠</button>
+    <div class="brand-title">
+      <strong>Centro VR Inclusivo</strong>
+      <small>Colocación segura · Controles · Familias · Docentes</small>
+    </div>
+  </div>
+  <div class="topbar-right">
+    <button class="btn-icon" id="btn-voice">🗣️</button>
+    <button class="btn-icon" id="btn-theme">🌓</button>
+    <button class="btn-icon" id="btn-font-inc">A+</button>
+    <button class="btn-icon" id="btn-font-dec">A−</button>
+  </div>
+</header>
+
+<main id="main-content">
+  <section class="hero-grid">
+    <article class="card">
+      <div class="hero-badge">
+        🥽 VR segura · 🧩 PIE · 🧠 Sala SEM
+      </div>
+      <h1 class="hero-title">Centro VR inclusivo para estudiantes, familias y docentes</h1>
+      <p>
+        Este sitio reúne todo lo necesario para usar el visor Oculus / Meta Quest de forma segura,
+        cariñosa e inclusiva: colocación del visor, explicación de los controles con pictogramas,
+        fichas imprimibles, información para familias y un espacio de capacitación docente.
+      </p>
+      <div class="hero-actions">
+        <a href="pages/colocacion.html" class="btn-pill primary">🥽 Colocación segura del visor</a>
+        <a href="pages/controles.html" class="btn-pill alt">🎮 Conoce los controles</a>
+        <a href="fichas/index.html" class="btn-pill soft">🧩 Fichas con pictogramas</a>
+      </div>
+      <p class="hero-meta">
+        Diseñado para el Programa de Integración Escolar (PIE) y la Sala SEM, pero útil para cualquier
+        comunidad educativa que quiera cuidar a sus estudiantes mientras exploran la realidad virtual.
+      </p>
+    </article>
+
+    <article class="card">
+      <h2>Rutas rápidas</h2>
+      <div class="cards-grid">
+        <div class="card-nav" onclick="location.href='pages/apoderados.html'">
+          <div class="card-nav-header">
+            <span class="card-nav-emoji">🏡</span>
+            <div class="card-nav-title">
+              <strong>Familias informadas</strong>
+              <small>Ficha clara para apoderados</small>
+            </div>
+          </div>
+          <div class="card-nav-body">
+            Información simple sobre qué es el visor, cómo se usa en la sala y cómo pueden acompañar
+            desde casa, con amor y corazón.
+          </div>
+          <div class="card-nav-footer">
+            Ver ficha para apoderados →
+          </div>
+        </div>
+
+        <div class="card-nav" onclick="location.href='pages/docentes_capacitacion.html'">
+          <div class="card-nav-header">
+            <span class="card-nav-emoji">👩‍🏫</span>
+            <div class="card-nav-title">
+              <strong>Capacitación docente</strong>
+              <small>Uso pedagógico y seguro</small>
+            </div>
+          </div>
+          <div class="card-nav-body">
+            Módulos para planificar experiencias VR breves, seguras, con objetivos claros y registro
+            de evidencias para el PIE y el equipo docente.
+          </div>
+          <div class="card-nav-footer">
+            Ir a capacitación docente →
+          </div>
+        </div>
+
+        <div class="card-nav" onclick="location.href='docs/secuencia_A3_VR.pdf'">
+          <div class="card-nav-header">
+            <span class="card-nav-emoji">🖨️</span>
+            <div class="card-nav-title">
+              <strong>Lámina A3</strong>
+              <small>Secuencia visual completa</small>
+            </div>
+          </div>
+          <div class="card-nav-body">
+            Una sola lámina para anticipar la experiencia VR: preparación, uso del visor, palabra PAUSA
+            y cierre reflexivo.
+          </div>
+          <div class="card-nav-footer">
+            Descargar secuencia A3 →
+          </div>
+        </div>
+      </div>
+      <div class="pills-row" style="margin-top:0.7rem;">
+        <span class="pill-tag">🟢 Bajo apoyo</span>
+        <span class="pill-tag">🟡 Apoyo medio</span>
+        <span class="pill-tag">🔴 Apoyo alto</span>
+        <span class="pill-tag">🗣️ Narrador por ficha</span>
+      </div>
+    </article>
+  </section>
+
+  <section>
+    <h2 class="section-title">¿Qué encontrarás en este centro VR?</h2>
+    <div class="cards-grid">
+      <article class="card">
+        <div class="card-nav-header">
+          <span class="card-nav-emoji">🥽</span>
+          <div class="card-nav-title">
+            <strong>Colocación segura del visor</strong>
+            <small>Paso a paso visual</small>
+          </div>
+        </div>
+        <p class="card-nav-body">
+          Una guía visual y escrita, pensada para estudiantes, con pasos claros, emojis y lenguaje
+          sencillo. Incluye advertencias de seguridad y la palabra clave <strong>PAUSA</strong>.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="card-nav-header">
+          <span class="card-nav-emoji">🎮</span>
+          <div class="card-nav-title">
+            <strong>Controles VR con pictogramas</strong>
+            <small>Vista frontal, gatillo, grip y más</small>
+          </div>
+        </div>
+        <p class="card-nav-body">
+          Fichas interactivas y PDFs listos para imprimir, con pictogramas (ARASAAC), textos bilingües
+          y narrador integrado para estudiantes no lectores.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="card-nav-header">
+          <span class="card-nav-emoji">🏡</span>
+          <div class="card-nav-title">
+            <strong>Familias informadas y tranquilas</strong>
+            <small>La educación parte en casa</small>
+          </div>
+        </div>
+        <p class="card-nav-body">
+          Sitio y ficha en PDF para apoderados, donde se explica cómo, cuánto y para qué se usa
+          el visor en la sala, invitando a conversar en casa sobre lo vivido.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="card-nav-header">
+          <span class="card-nav-emoji">👩‍🏫</span>
+          <div class="card-nav-title">
+            <strong>Capacitación docente</strong>
+            <small>PIE · SEM · evaluación</small>
+          </div>
+        </div>
+        <p class="card-nav-body">
+          Módulos que orientan a planificar, aplicar y evaluar experiencias VR, con foco en
+          neurodiversidad, seguridad, tiempos de exposición y registro de evidencias.
+        </p>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <span>Neotech EduLab · Liceo Bicentenario · Programa de Integración Escolar</span>
+  <span>Centro VR Inclusivo · Versión 1</span>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
